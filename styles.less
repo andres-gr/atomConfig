@@ -1,0 +1,272 @@
+@-webkit-keyframes bracketanimation {
+    from  {
+        border-width: 2px;
+        border-color: rgba(24,175,240,0.8);
+        // border-color: rgba(24,240,27,1);
+        // border-color: rgba(222, 149, 54, 1);
+        left: 0px;
+        top: 0px;
+    }
+    50%   {
+        border-width: 4px;
+        border-color: rgba(24,175,240,0.8);
+        // border-color: rgba(24,240,27,1);
+        // border-color: rgba(222, 149, 54, 1);
+        left: -1px;
+        top: -4px;
+    }
+    to    {
+        border-width: 1px;
+        border-color: rgba(24,175,240,.5);
+        // border-color: rgba(24,240,27,0.5);
+        // border-color: rgba(222, 149, 54, 0.5);
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.minimap {
+    .linter-warning {
+        background: #BBBF62;
+    }
+}
+
+/* my styles */
+atom-text-editor {
+    border-color: rgba(225,225,225,.8);
+    border-width: medium;
+    background-color: #08111F;
+    &.editor .bracket-matcher .region {
+        border-bottom: 0;
+    }
+    &.editor .bracket-matcher .region::after {
+        content: "";
+        -webkit-animation-name: bracketanimation;
+        -webkit-animation-duration: .75s;
+        border: 1px solid rgba(24,175,240,.5);
+        // border: 1px solid rgba(24,240,27,0.5);
+        // border: 1px solid rgba(222, 149, 54, 0.5);
+        border-style: solid;
+        border-radius: 3px;
+        background-color: rgba(0,175,246,.2);
+        // background-color: rgba(0,246,54,0.2);
+        // background-color: rgba(255, 217, 0, 0.2);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    &.editor .cursor,
+    .cursor {
+        border-left: none;
+        border-bottom: 2px solid #30FF2B;
+    }
+    .gutter {
+        background-color: #2E3440;
+        div.line-number {
+            color: #5E81AC;
+            background-color: inherit;
+        }
+        div.line-number.cursor-line {
+            color: #A3BE8C;
+        }
+        span.line-number.cursor-line {
+            background-color: inherit;
+        }
+    }
+    .selection .region {
+        background-color: #434C5E;
+    }
+    .highlights .highlight-selected .region {
+        border-color: #ddd;
+    }
+    // Background
+    .highlights .highlight-selected.background .region {
+        background-color: rgba(155, 149, 0, 0.6);
+    }
+    // Light theme box (set in settings)
+    .highlights .highlight-selected.light-theme .region {
+        border-color: rgba(255, 128, 64, 0.4);
+    }
+    // Light theme background (set in settings)
+    .highlights .highlight-selected.light-theme.background .region {
+        background-color: rgba(255, 128, 64, 0.2);
+    }
+    atom-text-editor-minimap .minimap-visible-area {
+        background-color: #9A9A9A;
+        opacity: .15;
+    }
+}
+.indent-guide-improved {
+    background-color: #444;
+    &.indent-guide-stack {
+        background-color: #ACACAC;
+        &.indent-guide-active {
+            background-color: #95A700;
+        }
+    }
+}
+/* my styles end */
+
+/* syntax styles */
+atom-text-editor {
+    .syntax--string.syntax--quoted.syntax--double.syntax--js .syntax--entity.syntax--other.syntax--attribute-name.syntax--jsx {
+        color: #9FD781;
+    }
+    .syntax--punctuation.syntax--definition.syntax--variable.syntax--php,
+    .syntax--variable.syntax--other.syntax--php,
+    .syntax--entity.syntax--other.syntax--attribute-name.syntax--html,
+    .syntax--entity.syntax--other.syntax--attribute-name.syntax--jsx,
+    .syntax--entity.syntax--other.syntax--attribute-name.syntax--js,
+    .syntax--variable.syntax--other.syntax--object.syntax--js,
+    .syntax--variable.syntax--language.syntax--js ,
+    .syntax--constant.syntax--other.syntax--js,
+    .syntax--constant.syntax--character.syntax--entity.syntax--html,
+    .syntax--entity.syntax--name.syntax--function.syntax--sql,
+    .syntax--meta.syntax--property.syntax--class.syntax--js .syntax--variable.syntax--other.syntax--class.syntax--js,
+    .syntax--meta.syntax--method-call.syntax--with-arguments.syntax--js .syntax--variable.syntax--other.syntax--class.syntax--js {
+        color: #00CEDB;
+    }
+    .syntax--variable.syntax--other.syntax--property.syntax--php,
+    .syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin.syntax--php,
+    .syntax--punctuation.syntax--definition.syntax--parameters.syntax--end.syntax--php,
+    .syntax--punctuation.syntax--definition.syntax--arguments.syntax--begin.syntax--js,
+    .syntax--meta.syntax--brace.syntax--curly.syntax--js,
+    .syntax--meta.syntax--brace.syntax--square.syntax--js,
+    .syntax--punctuation.syntax--definition.syntax--arguments.syntax--end.syntax--js,
+    .syntax--meta.syntax--brace.syntax--round.syntax--js,
+    .syntax--punctuation.syntax--section.syntax--scope.syntax--begin.syntax--js,
+    .syntax--punctuation.syntax--section.syntax--scope.syntax--end.syntax--js,
+    .syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js .syntax--string.syntax--unquoted.syntax--js {
+        color: white;
+    }
+    .syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js {
+        .syntax--string.syntax--quoted.syntax--double.syntax--js,
+        .syntax--string.syntax--quoted.syntax--single.syntax--js {
+            color: #9FD781;
+            .syntax--punctuation.syntax--definition.syntax--string.syntax--begin.syntax--js,
+            .syntax--punctuation.syntax--definition.syntax--string.syntax--end.syntax--js {
+                color: #9FD781;
+            }
+        }
+    }
+    
+    .syntax--string.syntax--quoted.syntax--double.syntax--php,
+    .syntax--meta.syntax--string-contents.syntax--quoted.syntax--double.syntax--php,
+    .syntax--punctuation.syntax--definition.syntax--string.syntax--begin.syntax--php,
+    .syntax--punctuation.syntax--definition.syntax--string.syntax--end.syntax--php,
+    .syntax--constant.syntax--other.syntax--database-name.syntax--sql,
+    .syntax--constant.syntax--other.syntax--table-name.syntax--sql,
+    .syntax--string.syntax--quoted.syntax--single.syntax--unclosed.syntax--sql,
+    .syntax--source.syntax--sql {
+        color: #0C0;
+    }
+    .syntax--string.syntax--quoted.syntax--single.syntax--php,
+    .syntax--meta.syntax--string-contents.syntax--quoted.syntax--single.syntax--php,
+    .syntax--meta.syntax--parameters.syntax--js .syntax--variable.syntax--parameter.syntax--function.syntax--js,
+    .syntax--meta.syntax--function.syntax--arrow.syntax--js .syntax--meta.syntax--function.syntax--parameters.syntax--js .syntax--variable.syntax--other.syntax--readwrite.syntax--js {
+        color: #B5B5FF;
+    }
+    .syntax--constant.syntax--numeric.syntax--php,
+    .syntax--constant.syntax--numeric.syntax--sql,
+    .syntax--support.syntax--class.syntax--js,
+    .syntax--constant.syntax--numeric.syntax--js {
+        color: #DAD981;
+    }
+    .syntax--support.syntax--function.syntax--construct.syntax--php,
+    .syntax--support.syntax--function.syntax--network.syntax--php,
+    .syntax--support.syntax--function.syntax--json.syntax--php,
+    .syntax--storage.syntax--modifier.syntax--php,
+    .syntax--keyword.syntax--other.syntax--new.syntax--php,
+    .syntax--constant.syntax--language.syntax--php,
+    .syntax--constant.syntax--other.syntax--php,
+    .syntax--support.syntax--function.syntax--string.syntax--php,
+    .syntax--support.syntax--function.syntax--output.syntax--php,
+    .syntax--support.syntax--function.syntax--magic.syntax--php,
+    .syntax--support.syntax--function.syntax--url.syntax--php,
+    .syntax--support.syntax--function.syntax--array.syntax--php,
+    .syntax--support.syntax--function.syntax--var.syntax--php,
+    .syntax--support.syntax--function.syntax--funchand.syntax--php,
+    .syntax--entity.syntax--name.syntax--tag.syntax--other.syntax--html,
+    .syntax--keyword.syntax--control.syntax--js,
+    .syntax--storage.syntax--modifier.syntax--js,
+    .syntax--support.syntax--function.syntax--file.syntax--php,
+    .syntax--support.syntax--function.syntax--math.syntax--php,
+    .syntax--support.syntax--function.syntax--datetime.syntax--php,
+    .syntax--support.syntax--function.syntax--curl.syntax--php,
+    .syntax--support.syntax--function.syntax--php_imap.syntax--php,
+    .syntax--support.syntax--function.syntax--filter.syntax--php,
+    .syntax--support.syntax--function.syntax--sockets.syntax--php,
+    .syntax--support.syntax--function.syntax--errorfunc.syntax--php,
+    .syntax--support.syntax--function.syntax--info.syntax--php,
+    .syntax--support.syntax--class.syntax--exception.syntax--php,
+    .syntax--support.syntax--function.syntax--basic_functions.syntax--php,
+    .syntax--support.syntax--function.syntax--session.syntax--php,
+    .syntax--support.syntax--class.syntax--js {
+        color: #F4D592;
+    }
+    .syntax--keyword.syntax--control.syntax--php,
+    .syntax--punctuation.syntax--definition.syntax--entity.syntax--html,
+    .syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin.syntax--js,
+    .syntax--punctuation.syntax--definition.syntax--parameters.syntax--end.syntax--js,
+    .syntax--punctuation.syntax--definition.syntax--arguments.syntax--begin.syntax--bracket.syntax--round.syntax--js,
+    .syntax--punctuation.syntax--definition.syntax--arguments.syntax--end.syntax--bracket.syntax--round.syntax--js,
+    .syntax--punctuation.syntax--definition.syntax--modules.syntax--begin.syntax--js,
+    .syntax--punctuation.syntax--definition.syntax--modules.syntax--end.syntax--js {
+        color: #E08958;
+    }
+    .syntax--keyword.syntax--operator.syntax--class.syntax--php,
+    .syntax--keyword.syntax--operator.syntax--assignment.syntax--php,
+    .syntax--keyword.syntax--operator.syntax--string.syntax--php,
+    .syntax--punctuation.syntax--terminator.syntax--expression.syntax--php,
+    .syntax--keyword.syntax--operator.syntax--key.syntax--php,
+    .syntax--keyword.syntax--operator.syntax--logical.syntax--php,
+    .syntax--keyword.syntax--other.syntax--DML.syntax--sql,
+    .syntax--keyword.syntax--operator.syntax--comparison.syntax--sql,
+    .syntax--keyword.syntax--other.syntax--alias.syntax--sql,
+    .syntax--keyword.syntax--other.syntax--DDL.syntax--create.syntax--II.syntax--sql,
+    .syntax--support.syntax--function.syntax--aggregate.syntax--sql,
+    .syntax--keyword.syntax--operator.syntax--arithmetic.syntax--php,
+    .syntax--keyword.syntax--operator.syntax--increment-decrement.syntax--php,
+    .syntax--keyword.syntax--operator.syntax--comparison.syntax--php,
+    .syntax--keyword.syntax--operator.syntax--math.syntax--sql,
+    .syntax--keyword.syntax--operator.syntax--star.syntax--sql,
+    .syntax--keyword.syntax--other.syntax--data-integrity.syntax--sql,
+    .syntax--keyword.syntax--sql.syntax--mysql,
+    .syntax--keyword.syntax--other.syntax--order.syntax--sql,
+    .syntax--function.syntax--sql.syntax--mysql,
+    .syntax--keyword.syntax--other.syntax--not.syntax--sql,
+    .syntax--storage.syntax--type.syntax--sql,
+    .syntax--entity.syntax--name.syntax--tag.syntax--structure.syntax--any.syntax--html,
+    .syntax--entity.syntax--name.syntax--tag.syntax--inline.syntax--any.syntax--html,
+    .syntax--entity.syntax--name.syntax--tag.syntax--block.syntax--any.syntax--html,
+    .syntax--keyword.syntax--operator.syntax--js,
+    .syntax--meta.syntax--delimiter.syntax--object.syntax--comma.syntax--js,
+    .syntax--punctuation.syntax--terminator.syntax--statement.syntax--js,
+    .syntax--meta.syntax--delimiter.syntax--property.syntax--period.syntax--js,
+    .syntax--meta.syntax--delimiter.syntax--method.syntax--period.syntax--js,
+    .syntax--entity.syntax--name.syntax--tag.syntax--html,
+    .syntax--keyword.syntax--other.syntax--create.syntax--sql,
+    .syntax--keyword.syntax--other.syntax--sql,
+    .syntax--support.syntax--function.syntax--string.syntax--sql,
+    .syntax--keyword.syntax--operator.syntax--bitwise.syntax--php,
+    .syntax--meta.syntax--tag.syntax--sgml.syntax--doctype.syntax--html,
+    .syntax--entity.syntax--name.syntax--tag.syntax--jsx,
+    .syntax--entity.syntax--name.syntax--tag.syntax--js,
+    .syntax--source.syntax--js.syntax--jsx .syntax--keyword.syntax--operator.syntax--bitwise.syntax--binary.syntax--es {
+        color: #FF8080;
+    }
+    .syntax--meta.syntax--function.syntax--js .syntax--entity.syntax--name.syntax--function.syntax--js,
+    .syntax--entity.syntax--name.syntax--function.syntax--js,
+    .syntax--api.syntax--meteor.syntax--core,
+    .syntax--support.syntax--function.syntax--dom.syntax--js,
+    .syntax--variable.syntax--other.syntax--module.syntax--js {
+        color: #ADFFD8;
+    }
+    .syntax--constant.syntax--other.syntax--js {
+        color: #FFF;
+    }
+    .syntax--variable.syntax--other.syntax--readwrite.syntax--decorator.syntax--js {
+        color: #FFD29E;
+    }
+}
+/* syntax styles end */

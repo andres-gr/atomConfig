@@ -1,0 +1,199 @@
+"*":
+  "atom-ide-ui":
+    "atom-ide-diagnostics-ui":
+      showDiagnosticTraces: true
+      showDirectoryColumn: true
+    "atom-ide-outline-view": {}
+  "atom-ternjs":
+    caseInsensitive: false
+    guess: false
+    inlineFnCompletionDocumentation: true
+    snippetsFirst: true
+    useSnippets: true
+    useSnippetsAndFunction: true
+  "autocomplete-js-import":
+    fuzzy:
+      enabled: true
+      excludedDirs: [
+        "node_modules"
+        ".git"
+        ".meteor"
+      ]
+      fileTypes: [
+        "*"
+      ]
+    removeExtensions: [
+      ".js"
+      ".jsx"
+    ]
+  "autocomplete-meteor-packages": {}
+  "autocomplete-plus":
+    backspaceTriggersAutocomplete: true
+    consumeSuffix: false
+    enableAutoConfirmSingleSuggestion: false
+    enableBuiltinProvider: false
+    minimumWordLength: 2
+    strictMatching: true
+  "block-comment-plus":
+    wrapWith: "Spaces"
+  "bracket-matcher":
+    highlightMatchingLineNumber: true
+  "color-picker":
+    preferredFormat: "HEX"
+    uppercaseColorValues: true
+  core:
+    automaticallyUpdate: false
+    closeDeletedFileTabs: true
+    "cursor-blink-interval":
+      cursorBlinkInterval: 1000
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+        ".hgrc"
+      ]
+      "source.js": [
+        "js"
+      ]
+      "source.js.jsx": [
+        "js"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+      "text.html.spacebars": [
+        "html"
+      ]
+    disabledPackages: [
+      "wrap-guide"
+      "autosave"
+      "welcome"
+      "linter"
+      "linter-ui-default"
+    ]
+    excludeVcsIgnoredPaths: true
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "block-comment-plus"
+    ]
+    projectHome: "/Volumes/hackintoshHDD/Users/andres/Develbmt/Meteor"
+    telemetryConsent: "no"
+    themes: [
+      "nord-atom-ui"
+      "monokai-blackboard"
+    ]
+    titleBar: "custom-inset"
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "Fira Code"
+    fontSize: 12
+    scrollPastEnd: true
+    showInvisibles: true
+    softWrap: true
+    softWrapHangingIndent: 2
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "23a504ce-d712-4260-98f1-02786cb3820a"
+  "file-icons":
+    forceShow: false
+    onChanges: true
+  "fuzzy-finder":
+    searchAllPanes: true
+  "git-diff":
+    showIconsInEditorGutter: true
+  "highlight-line":
+    enableSelectionBorder: true
+    hideHighlightOnSelect: true
+  "highlight-selected":
+    ignoreCase: true
+  "language-babel": {}
+  "letter-spacing":
+    "letter-spacing": 1.375
+  "linter-eslint":
+    globalNodePath: "npm get prefix"
+    lintHtmlFiles: true
+  "linter-ui-default":
+    panelHeight: 200
+    showProviderName: true
+  minimap:
+    displayPluginsControls: false
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "minimap-git-diff":
+    useGutterDecoration: true
+  "minimap-selection":
+    highlightCursorsLines: true
+  "nord-atom-ui":
+    darkerFormFocusEffect: true
+  "one-dark-ui":
+    hideDockButtons: true
+    tabSizing: "Maximum"
+  pigments:
+    autocompleteScopes: [
+      ".source.css"
+      ".source.css.less"
+      ".source.sass"
+      ".source.css.scss"
+      ".source.stylus"
+      ".text.html.basic"
+      ".text.html.spacebars"
+    ]
+    autocompleteSuggestionsFromValue: true
+    extendAutocompleteToColorValue: true
+    extendAutocompleteToVariables: true
+    mergeColorDuplicates: true
+    sortPaletteColors: "by name"
+  tabs:
+    addNewTabsAtEnd: true
+    displayMruTabList: false
+    enableMruTabSwitching: false
+    enableVcsColoring: true
+  "toggle-quotes":
+    quoteCharacters: "\"'`"
+  "tool-bar":
+    position: "Left"
+  "tree-view":
+    focusOnReveal: false
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnlyLines: true
+".babel.regexp.source":
+  editor:
+    showIndentGuide: true
+".basic.html.text":
+  editor:
+    showIndentGuide: true
+".coffee.source":
+  editor:
+    showIndentGuide: true
+".css.source.styled":
+  editor:
+    showIndentGuide: true
+".html.spacebars.text":
+  editor:
+    showIndentGuide: true
+".js.jsx.source":
+  editor:
+    showIndentGuide: true
+".js.source":
+  editor:
+    showIndentGuide: true
+".languagebabel.ttlextension":
+  editor:
+    showIndentGuide: true
