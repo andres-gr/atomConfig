@@ -44,8 +44,6 @@
   core:
     automaticallyUpdate: false
     closeDeletedFileTabs: true
-    "cursor-blink-interval":
-      cursorBlinkInterval: 1000
     customFileTypes:
       "source.ini": [
         ".buckconfig"
@@ -80,13 +78,7 @@
     packagesWithKeymapsDisabled: [
       "block-comment-plus"
     ]
-    projectHome: "/Volumes/hackintoshHDD/Users/andres/Develbmt/Meteor"
     telemetryConsent: "no"
-    themes: [
-      "nord-atom-ui"
-      "monokai-blackboard"
-    ]
-    titleBar: "custom-inset"
   editor:
     backUpBeforeSaving: true
     fontFamily: "Fira Code"
@@ -97,8 +89,6 @@
     softWrapHangingIndent: 2
     tabLength: 4
     tabType: "soft"
-  "exception-reporting":
-    userId: "23a504ce-d712-4260-98f1-02786cb3820a"
   "file-icons":
     forceShow: false
     onChanges: true
@@ -112,8 +102,6 @@
   "highlight-selected":
     ignoreCase: true
   "language-babel": {}
-  "letter-spacing":
-    "letter-spacing": 1.375
   "linter-eslint":
     globalNodePath: "npm get prefix"
     lintHtmlFiles: true
@@ -137,11 +125,6 @@
     useGutterDecoration: true
   "minimap-selection":
     highlightCursorsLines: true
-  "nord-atom-ui":
-    darkerFormFocusEffect: true
-  "one-dark-ui":
-    hideDockButtons: true
-    tabSizing: "Maximum"
   pigments:
     autocompleteScopes: [
       ".source.css"
@@ -164,8 +147,6 @@
     enableVcsColoring: true
   "toggle-quotes":
     quoteCharacters: "\"'`"
-  "tool-bar":
-    position: "Left"
   "tree-view":
     focusOnReveal: false
     hideVcsIgnoredFiles: true

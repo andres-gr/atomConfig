@@ -30,7 +30,7 @@
     'ctrl-tab': 'pane:show-next-item'
     'ctrl-shift-tab ^ctrl': 'unset!'
     'ctrl-shift-tab': 'pane:show-previous-item'
-'atom-text-editor':
+'.platform-darwin atom-text-editor':
     'cmd-f10': 'bookmarks:toggle-bookmark'
     'cmd-f12': 'bookmarks:jump-to-next-bookmark'
     'cmd-f11': 'bookmarks:jump-to-previous-bookmark'
